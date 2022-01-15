@@ -16,7 +16,11 @@ class Controller extends BaseController
     function send_mail(){
         $userData = DB::table('user')->get();
         $userCount = DB::table('user')->count();
+
+        // AT a time 250 emails send.
         $each = 250;
+
+        // To reduce load in server pause after each response.
         $pause = 1;
          
         for($i=0; $i<$userCount; $i+=$each){
@@ -33,6 +37,8 @@ class Controller extends BaseController
 
             }
             echo "send";
+
+            // After 250 mail send atonce, Sleep server to reduse load.
             sleep($pause);
 
         }
