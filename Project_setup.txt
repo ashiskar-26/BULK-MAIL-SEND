@@ -1,0 +1,8 @@
+SENDING BULK MAIL TO USER USING LARAVEL
+------------------------------------------
+
+1. Download the project to localhost.
+
+2. Create Mysql database given in the project i.e send_email.sql.
+
+3. Run project in localhost by url : http://localhost:8000/index
